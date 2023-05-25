@@ -5,38 +5,32 @@
 <head>
 	<link rel="stylesheet" href="styles.css">
 	 <style>
-        #line {
-            width: 200px;
-            height: 2px;
-            background-color: black;
-        }
-        .line {
-            animation : rotate is linear infinite;
-        }
-        .container {
-            width: 500px;
-            height: 500px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #e7e7e7;
-        }
-        @keyframes rotate {
-            from {
-                transform: rotate(0deg);
-            }
-            to {
-                transform: rotate(360deg);
-            }
-        }
+    #line{
+	position:absolute;
+	background-color:black;
+	width:200px;
+	height:2px;
+	margin:160px;
+	animation: line 2s linear infinite;
+	animation-direction:reverse;
+}
+@keyframes line{
+	to{
+		transform:rotate(0deg);
+
+	}
+from{
+	transform:rotate(360deg);
+}
+}
     </style>
 </head>
 
 <body>
 	<!-- the entire body must be written by student -->
-	 <button onclick="showElement()">show</button>
+<!-- 	 <button onclick="showElement()">show</button>
         <button id="start-stop" onclick="startAnimation()">Start Animation</button>
-        <!-- <button onclick="stopAnimation()">Stop Animation</button> -->
+        <!-- <button onclick="stopAnimation()">Stop Animation</button> --> 
 
         <div class="container">
             <div style="transform: rotate(200deg)" id="line" ></div>
